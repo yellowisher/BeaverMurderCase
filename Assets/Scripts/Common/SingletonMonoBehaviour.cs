@@ -41,7 +41,7 @@ namespace BeaverMurderCase.Common
 
         private void OnDestroy()
         {
-            if (Instance == null)
+            if (_instance == this)
             {
                 _instance = null;
             }

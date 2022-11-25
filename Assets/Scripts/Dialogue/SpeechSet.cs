@@ -13,6 +13,8 @@ namespace BeaverMurderCase.Dialogue
     [Serializable]
     public class Speech
     {
-        public string Text;
+        [Range(0, 1)] public int Talker;
+        public Sprite Portrait;
+        [TextArea(3, 10)] public string Line;
     }
 }

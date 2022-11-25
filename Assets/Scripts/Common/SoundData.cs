@@ -10,6 +10,8 @@ namespace BeaverMurderCase.Common
     
     public enum ClipType
     {
+        ButtonHover,
+        Typing,
     }
     
     public class SoundData : ScriptableSingleton<SoundData>
@@ -32,7 +34,7 @@ namespace BeaverMurderCase.Common
         [SerializeField] private List<BgmPair> _bgmPairs;
         [SerializeField] private List<ClipPair> _clipPairs;
 
-        public AudioClip GetBgmClip(BgmType type) => _bgmPairs.Find(pair => pair.Type == type).Clip;
-        public AudioClip GetSfxClip(ClipType type) => _clipPairs.Find(pair => pair.Type == type).Clip;
+        public AudioClip GetBgmClip(BgmType type) => _bgmPairs.Find(pair => pair.Type == type)?.Clip;
+        public AudioClip GetSfxClip(ClipType type) => _clipPairs.Find(pair => pair.Type == type)?.Clip;
     }
 }

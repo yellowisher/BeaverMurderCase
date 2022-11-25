@@ -1,7 +1,6 @@
 ﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using Zenject;
 
 namespace BeaverMurderCase.GameBook
 {
@@ -12,42 +11,41 @@ namespace BeaverMurderCase.GameBook
         [SerializeField] private TextMeshProUGUI _pageText;
         [SerializeField] private Color _lockedPageColor;
         [SerializeField] private Color _defaultPageColor;
+        [SerializeField] private Color _currentPageColor;
         [SerializeField] private Color _newPageColor;
-        
-        public bool IsUnlocked { get; private set; }
+
         public bool IsNeverVisit { get; private set; }
 
-        private BookManager _bookManager;
-
+#if UNITY_EDITOR
         public void EditorInitialize(int index)
         {
             _pageText.text = $"{index}p";
             _page = index;
+            UnityEditor.EditorUtility.SetDirty(_pageText);
         }
-
-        [Inject]
-        public void Constructor(BookManager bookManager)
-        {
-            _bookManager = bookManager;
-        }
+#endif
 
         public void Initialize()
         {
             _pageText.color = _lockedPageColor;
         }
 
-        public void Unlock()
+        public void OnPageUnlocked()
         {
-            IsUnlocked = true;
             _pageText.color = _newPageColor;
         }
         
         public void OnClick()
         {
-            if (!IsUnlocked) return;
+            if (!BookManager.Instance.Pages[_page].IsUnlocked) return;
 
             IsNeverVisit = false;
-            _pageText.color = _defaultPageColor;
+            BookManager.Instance.OpenPage(_page);
+        }
+
+        public void SetCurrentPage(bool isCurrentPage)
+        {
+            _pageText.color = isCurrentPage ? _currentPageColor : _defaultPageColor;
         }
     }
 }
