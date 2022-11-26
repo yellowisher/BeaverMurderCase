@@ -9,6 +9,7 @@ namespace BeaverMurderCase.GameBook.Gimmick
     {
         Fire,
         Valve,
+        GameStart,
     }
 
     [Serializable]
