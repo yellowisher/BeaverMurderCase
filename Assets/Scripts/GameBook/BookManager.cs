@@ -75,6 +75,15 @@ namespace BeaverMurderCase.GameBook
             return true;
         }
 
+        public void UnlockPageSimple(int page) {
+            if (Pages[page].IsUnlocked) return;
+
+            GameManager.Instance.SetScrollerState(false);
+            Pages[page].IsUnlocked = true;
+            PageButtons[page].OnPageUnlocked();
+            return;
+        }
+
         public async void OpenPage(int page)
         {
             if (_isTransitioning) return;
