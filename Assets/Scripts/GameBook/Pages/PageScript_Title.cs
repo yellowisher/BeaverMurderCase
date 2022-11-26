@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace BeaverMurderCase.GameBook.Pages
 {
-    public class PageScript_0_Title : PageScript
+    public class PageScript_Title : PageScript
     {
         [SerializeField] private ScrollObject _gameStartMessage;
 
@@ -16,9 +16,9 @@ namespace BeaverMurderCase.GameBook.Pages
             _gameStartMessage.OnScroll.AddListener(OnScroll);
         }
 
-        private void OnScroll(float amount)
+        private void OnScroll(Vector2 amount)
         {
-            _accumulated += amount;
+            _accumulated += amount.x;
             _minStartPoint = Mathf.Min(_minStartPoint, _accumulated);
 
             if (_accumulated >= _minStartPoint + 1f)

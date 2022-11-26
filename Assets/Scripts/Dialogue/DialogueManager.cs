@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using BeaverMurderCase.Common;
+using Cysharp.Threading.Tasks;
 using Febucci.UI;
 using NaughtyAttributes;
 using UnityEngine;
@@ -136,6 +137,11 @@ namespace BeaverMurderCase.Dialogue
         {
             image.sprite = null;
             image.gameObject.SetActive(false);
+        }
+
+        public UniTask WaitForSpeechEndAsync()
+        {
+            return UniTask.WaitUntil(() => !IsSpeeching);
         }
         
         [SerializeField] private SpeechSet _testSpeechSet;

@@ -20,7 +20,6 @@ namespace BeaverMurderCase.GameBook.Gimmick
     
     public class Scroller : MonoBehaviour
     {
-        [SerializeField] private float _yIgnoranceRate;
         [SerializeField] private List<ScrollerPair> _pairs;
 
         private Dictionary<ScrollerType, GameObject> _scrollerObjects = new();
@@ -49,17 +48,22 @@ namespace BeaverMurderCase.GameBook.Gimmick
 
         private void Update()
         {
+            Transform scrollerTransform = null;
             foreach (var pair in _scrollerObjects)
             {
                 pair.Value.SetActive(BookManager.Instance.CurrentPage.ScrollerType == pair.Key);
+                if (BookManager.Instance.CurrentPage.ScrollerType == pair.Key)
+                {
+                    scrollerTransform = pair.Value.transform;
+                }
             }
             
             var root = GameManager.Instance.RootCanvas.transform as RectTransform;
             RectTransformUtility.ScreenPointToWorldPointInRectangle(root, Input.mousePosition, Camera.main, out var worldPoint);
 
             transform.position = worldPoint;
-            var scrollerRt = transform as RectTransform;
-            var currentBounds = RectTransformUtility.CalculateRelativeRectTransformBounds(root, scrollerRt); 
+            var scrollerRt = scrollerTransform as RectTransform;
+            var currentBounds = RectTransformUtility.CalculateRelativeRectTransformBounds(root, scrollerRt);
             
             foreach (var scrollObject in _scrollObjects)
             {
@@ -68,12 +72,12 @@ namespace BeaverMurderCase.GameBook.Gimmick
 
                 if (IsPointInScrollerRect(_prevScrollerBounds, objectBounds) && IsPointInScrollerRect(currentBounds, objectBounds))
                 {
-                    float delta = currentBounds.center.x - _prevScrollerBounds.center.x;
-                    float ratio = delta / objectBounds.size.x;
+                    var delta = currentBounds.center - _prevScrollerBounds.center;
+                    var amount = new Vector2(delta.x / objectBounds.size.x, delta.y / objectBounds.size.y);
 
-                    if (ratio != 0)
+                    if (amount != Vector2.zero)
                     {
-                        scrollObject.Scroll(ratio);
+                        scrollObject.Scroll(amount);
                     }
                 }
             }
@@ -84,11 +88,7 @@ namespace BeaverMurderCase.GameBook.Gimmick
         private bool IsPointInScrollerRect(Bounds scrollerBounds, Bounds targetBounds)
         {
             bool isInX = scrollerBounds.min.x < targetBounds.center.x && targetBounds.center.x < scrollerBounds.max.x;
-            float adjustedYExtent = targetBounds.extents.y * _yIgnoranceRate;
-            float objectYMin = targetBounds.center.y - adjustedYExtent;
-            float objectYMax = targetBounds.center.y + adjustedYExtent;
-            bool isInY = scrollerBounds.min.y < objectYMin && scrollerBounds.max.y > objectYMax;
-            
+            bool isInY = scrollerBounds.min.y < targetBounds.center.y && targetBounds.center.y < scrollerBounds.max.y;
             return isInX && isInY;
         }
     }
