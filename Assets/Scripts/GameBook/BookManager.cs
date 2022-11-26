@@ -16,8 +16,8 @@ namespace BeaverMurderCase.GameBook
         [SerializeField] private float _fadeDelay = 0.1f;
 
         private bool _isTransitioning;
-        
-        public List<Page> Pages { get; } = new();
+
+        public Dictionary<int, Page> Pages { get; } = new();
         public List<PageButton> PageButtons { get; } = new();
 
         public int CurrentPageNumber { get; private set; } = -1;
@@ -42,15 +42,12 @@ namespace BeaverMurderCase.GameBook
             base.Awake();
 
             var pages = _pageHolder.GetComponentsInChildren<Page>(true);
-            Pages.AddRange(pages);
-
-            for (int i = 0; i < Pages.Count; i++)
+            foreach (var page in pages)
             {
-                var page = Pages[i];
+                Pages.Add(page.PageNumber, page);
                 page.gameObject.SetActive(false);
-                page.Initialize(i);
             }
-            
+
             var buttons = _pageButtonHolder.GetComponentsInChildren<PageButton>(true);
             PageButtons.AddRange(buttons);
             foreach (var button in PageButtons)

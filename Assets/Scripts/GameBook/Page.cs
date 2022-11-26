@@ -7,10 +7,10 @@ namespace BeaverMurderCase.GameBook
     public class Page : MonoBehaviour
     {
         [SerializeField] private CanvasGroup _canvasGroup;
-        public ScrollerType ScrollerType; 
+        public ScrollerType ScrollerType;
+        public int PageNumber;
         
         public bool IsUnlocked { get; set; }
-        public int PageNumber { get; private set; }
         
         public CanvasGroup CanvasGroup => _canvasGroup;
 
@@ -19,11 +19,6 @@ namespace BeaverMurderCase.GameBook
         private void Awake()
         {
             _pageScript = GetComponentInChildren<PageScript>();
-        }
-
-        public void Initialize(int pageNumber)
-        {
-            PageNumber = pageNumber;
         }
 
         public void Open()
