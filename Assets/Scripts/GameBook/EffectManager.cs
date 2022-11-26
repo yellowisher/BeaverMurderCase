@@ -16,6 +16,8 @@ namespace BeaverMurderCase.GameBook
     public class EffectManager : SingletonMonoBehaviour<EffectManager>
     {
         [SerializeField] private Image ScreenArea;
+        [SerializeField] private DOTweenAnimation _shakeAnimation;
+        
         [Button] public void Test()
         {
             Color c = new Color(1.0f, 1.0f, 1.0f);
@@ -34,6 +36,18 @@ namespace BeaverMurderCase.GameBook
             else {
                 ScreenArea.DOColor(color, delay).SetEase(Ease.Linear);
             }
+        }
+
+        public async UniTask ShakeScreen()
+        {
+            _shakeAnimation.DORestart();
+            await UniTaskHelper.DelaySeconds(_shakeAnimation.duration);
+        }
+
+        [Button]
+        public void TestShakeScreen()
+        {
+            ShakeScreen().Forget();
         }
     }
 }
