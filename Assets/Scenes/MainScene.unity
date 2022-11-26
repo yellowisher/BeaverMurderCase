@@ -6587,6 +6587,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 769382231}
     m_Modifications:
+    - target: {fileID: 289214754, guid: d279bf2017f45a0449a133b2a7ef7479, type: 3}
+      propertyPath: _afterSpeech.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 289214754, guid: d279bf2017f45a0449a133b2a7ef7479, type: 3}
+      propertyPath: _afterSpeech.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 289214754, guid: d279bf2017f45a0449a133b2a7ef7479, type: 3}
+      propertyPath: _afterSpeech.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1729844889}
+    - target: {fileID: 289214754, guid: d279bf2017f45a0449a133b2a7ef7479, type: 3}
+      propertyPath: _afterSpeech.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 289214754, guid: d279bf2017f45a0449a133b2a7ef7479, type: 3}
+      propertyPath: _afterSpeech.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TestShakeScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 289214754, guid: d279bf2017f45a0449a133b2a7ef7479, type: 3}
+      propertyPath: _afterSpeech.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BeaverMurderCase.GameBook.EffectManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 289214754, guid: d279bf2017f45a0449a133b2a7ef7479, type: 3}
+      propertyPath: _afterSpeech.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1845519667818051718, guid: d279bf2017f45a0449a133b2a7ef7479, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
