@@ -17,6 +17,9 @@ namespace BeaverMurderCase.GameBook.Pages
             _fire.OnScroll.AddListener(OnScroll);    
         }
 
+        protected async override void OnOpened() {
+        }
+
         public void OnScroll(Vector2 amount)
         {
             _accumulated += Mathf.Abs(amount.x);

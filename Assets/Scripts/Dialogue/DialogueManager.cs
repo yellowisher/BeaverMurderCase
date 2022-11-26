@@ -66,13 +66,14 @@ namespace BeaverMurderCase.Dialogue
                 Debug.LogError($"Cannot find speech name: {speechName}");
                 return;
             }
-            
+           
             StartSpeechSet(speech);
         }
 
         public void StartSpeechSet(SpeechSet speechSet)
         {
             ClearSpeech();
+            GameManager.Instance.SetScrollerState(false);
             StartCoroutine(nameof(StartSpeechSetCo), speechSet);
         }
 
