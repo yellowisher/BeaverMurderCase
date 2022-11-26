@@ -98,6 +98,7 @@ namespace BeaverMurderCase.GameBook
             
             PageButtons[page].SetCurrentPage(true);
             GameManager.Instance.SetScrollerState(false);
+            SoundManager.PlaySfx(ClipType.MoveScene);
 
             if (CurrentPageNumber != -1)
             {

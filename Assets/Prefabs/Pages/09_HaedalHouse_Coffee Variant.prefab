@@ -114,8 +114,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _duration: 0.1
-  _scaleAdditionOnOver: 0.15
-  _scaleAdditionOnPress: -0.15
+  _scaleAdditionOnOver: 0.05
+  _scaleAdditionOnPress: -0.05
+  _playSound: 0
 --- !u!1 &4968395470555997643
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,7 +150,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -74, y: 134}
+  m_AnchoredPosition: {x: -74, y: 209}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6602167380176377891

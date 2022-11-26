@@ -141,6 +141,7 @@ namespace BeaverMurderCase.Dialogue
                 case SpeechEventType.Die:
                 {
                     EffectManager.Instance.ShakeScreen().Forget();
+                    SoundManager.PlaySfx(ClipType.Die);
                     await EffectManager.Instance.ScreenFlash(new Color(1f, 0, 0, 0.75f), 0.75f);
                     await EffectManager.Instance.ScreenFlash(new Color(0, 0, 0, 0), 0.75f);
                     break;

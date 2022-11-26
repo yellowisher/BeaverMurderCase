@@ -29,6 +29,6 @@ namespace BeaverMurderCase.Dialogue
         
         [Range(0, 2)] public int Talker = NoTalker;
         public Sprite Portrait;
-        [TextArea(3, 10)] public string Line;
+        [TextArea(5, 10)] public string Line;
     }
 }

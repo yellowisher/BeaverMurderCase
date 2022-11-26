@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: BearHousePen
   m_EditorClassIdentifier: 
   Speeches:
-  - Talker: 1
+  - EventDelay: 0
+    EventType: 0
+    Talker: 1
     Portrait: {fileID: 0}
-    Line: "\uD3B8\uC9C0\uB97C \uC4F0\uB2E4 \uBD80\uB7EC\uC9C4 \uAE43\uD39C\uC774\uB2E4.\n<color=yellow>>\uACF0\uC758
+    Line: "\uD3B8\uC9C0\uB97C \uC4F0\uB2E4 \uBD80\uB7EC\uC9C4 \uAE43\uD39C\uC774\uB2E4.\n\uC606\uC758
+      \uC4F0\uB2E4\uB9CC \uD3B8\uC9C0\uC5D0\uB294 <color=orange>\"\uC0AC\uBB34\uC2E4\uC5D0\uC11C
+      \uB09C\uB3D9\uC744 \uBD80\uB824\uC11C \uBBF8\uC548\uD558\uB124, \uBE44\uBC84.
+      \uC5F0\uC5B4\uB97C \uBA39\uC9C0 \uBABB\uD55C\uB2E4\uAE30\uC5D0 \uD765\uBD84\uC744
+      \uCC38\uC9C0 \uBABB\uD588\uC5B4.\"</color> \uB77C\uACE0 \uC4F0\uC5EC\uC788\uC5C8\uB2E4.\n<color=yellow>>\uACF0\uC758
       \uC9D1\uC73C\uB85C \uB3CC\uC544\uAC00\uB824\uBA74 7p \uB85C</color>"

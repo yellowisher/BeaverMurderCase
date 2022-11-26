@@ -1,6 +1,5 @@
 ﻿using BeaverMurderCase.Dialogue;
 using Cysharp.Threading.Tasks;
-using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,9 +15,10 @@ namespace BeaverMurderCase.GameBook.Pages
             EffectManager.Instance.ScreenFlashReset().Forget();
         }
 
-        protected override void OnOpened()
+        protected override async void OnOpened()
         {
             DialogueManager.Instance.StartSpeechSet(_targetSpeech);
+            await DialogueManager.Instance.WaitForSpeechEndAsync();
             _afterSpeech?.Invoke();
         }
     }

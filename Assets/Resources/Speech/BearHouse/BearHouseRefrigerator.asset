@@ -19,7 +19,7 @@ MonoBehaviour:
     Portrait: {fileID: 0}
     Line: "\uB0C9\uC7A5\uACE0\uB97C \uC5F4\uC5B4\uBCF4\uB824\uB294 \uCC30\uB098,
       \uB4A4\uCABD\uC5D0\uC11C \uC131\uD07C\uC131\uD07C \uAC77\uB294 \uC18C\uB9AC\uAC00
-      \uB4E4\uB824\uC628\uB2E4.\n"
+      \uB4E4\uB824\uC628\uB2E4."
   - EventDelay: 1.5
     EventType: 1
     Talker: 1

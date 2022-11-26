@@ -16,6 +16,7 @@ public class InteractiveButton : MonoBehaviour,
     [SerializeField] private float _duration = 0.1f;
     [SerializeField] private float _scaleAdditionOnOver  =  0.15f;
     [SerializeField] private float _scaleAdditionOnPress = -0.15f;
+    [SerializeField] private bool _playSound;
 
     private bool _isPressing;
     private Transform Target
@@ -31,7 +32,10 @@ public class InteractiveButton : MonoBehaviour,
     {
         _onEnter?.Invoke();
         Target.DOBlendableScaleBy(CreateScale(_scaleAdditionOnOver), _duration);
-        SoundManager.PlaySfx(ClipType.ButtonHover);
+        if (_playSound)
+        {
+            SoundManager.PlaySfx(ClipType.ButtonHover);
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData)

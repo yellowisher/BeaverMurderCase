@@ -12,7 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c4435a8c5b1bbc479e195905ce59c7a, type: 3}
   m_Name: SoundData
   m_EditorClassIdentifier: 
-  _bgmPairs: []
+  _bgmPairs:
+  - Type: 0
+    Clip: {fileID: 8300000, guid: aedd3ac52e214234a8889409f1a1820f, type: 3}
   _clipPairs:
   - Type: 1
-    Clip: {fileID: 8300000, guid: 0dae724cb893d234693f768c9f4c20b9, type: 3}
+    Clip: {fileID: 8300000, guid: 4decf20aaa0df2c4b95bf1bb6c193069, type: 3}
+  - Type: 0
+    Clip: {fileID: 8300000, guid: dcbb373711570634a8b6af5df742a689, type: 3}
+  - Type: 2
+    Clip: {fileID: 8300000, guid: dd6b04d6ac8e0ab4f9e95e4c77e58fd0, type: 3}
+  - Type: 4
+    Clip: {fileID: 8300000, guid: a12bffdbe075f9e4db1555162c044f02, type: 3}
+  - Type: 3
+    Clip: {fileID: 8300000, guid: c5cb2d4ffaa9c694c8d09be28919bf6c, type: 3}
+  - Type: 5
+    Clip: {fileID: 8300000, guid: c37a13b89b037a846982fc7f3de20056, type: 3}

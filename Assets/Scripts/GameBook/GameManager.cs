@@ -2,6 +2,7 @@
 using BeaverMurderCase.GameBook.Gimmick;
 using Febucci.UI.Core;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace BeaverMurderCase.GameBook
@@ -40,6 +41,11 @@ namespace BeaverMurderCase.GameBook
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 ToggleScroller();
+            }
+
+            if (Input.GetKeyDown(KeyCode.F12))
+            {
+                SceneManager.LoadScene(0);
             }
         }
 

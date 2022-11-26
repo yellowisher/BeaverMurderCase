@@ -51,6 +51,7 @@ namespace BeaverMurderCase.GameBook.Pages
                 if (_first_time) {
                     _first_time = true;
                     Dialogue.DialogueManager.Instance.StartSpeechSet("start_dialog 3");
+                    SoundManager.PlayBgm(BgmType.Bgm);
                     await UniTask.WaitUntil(() => !Dialogue.DialogueManager.Instance.IsSpeeching);
                 }
 

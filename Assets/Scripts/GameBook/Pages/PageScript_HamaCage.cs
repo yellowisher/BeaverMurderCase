@@ -63,6 +63,7 @@ namespace BeaverMurderCase.GameBook.Pages
             
             _mococoImage.raycastTarget = false;
             _mococoAnimation.DORestart();
+            SoundManager.PlaySfx(ClipType.Pop);
             await UniTaskHelper.DelaySeconds(_mococoAnimation.duration);
             DialogueManager.Instance.StartSpeechSet("Hama_MococoClick");
         }

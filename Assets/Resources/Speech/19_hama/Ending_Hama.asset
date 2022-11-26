@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7097c8aa76da4dc6b1a0b0a46c877d2e, type: 3}
-  m_Name: BeaverOffice
+  m_Name: Ending_Hama
   m_EditorClassIdentifier: 
   Speeches:
   - EventDelay: 0
     EventType: 0
     Talker: 1
     Portrait: {fileID: 0}
-    Line: "\uC774\uC81C\uB294 \uB354 \uC774\uC0C1 \uC8FC\uC778 \uC5C6\uB294 \uC0AC\uBB34\uC18C\uB2E4.\n\uCD5C\uADFC
-      \uB310 \uACF5\uC0AC\uB54C\uBB38\uC5D0 \uBD88\uB9CC\uC744 \uD45C\uD558\uB294
-      \uB3D9\uBB3C\uB4E4\uC774 \uB9CE\uC544 \uAF64 \uC2DC\uB044\uB7EC\uC6E0\uB2E4.\n<color=yellow>>\uC0AC\uBB34\uC2E4\uB85C
-      \uB3CC\uC544\uAC00\uB824\uBA74 2p \uB85C</color>"
+    Line: "\uD558\uB9C8\uB294... \uBC94\uC778\uC774 \uC544\uB2C8\uC5C8\uB2E4...\n\uB140\uC11D\uC740
+      \uBD84\uBA85 \uB310 \uD655\uC7A5 \uACF5\uC0AC\uB97C \uC2EB\uC5B4\uD588\uC9C0\uB9CC,
+      \uC790\uAE30 \uC9D1 \uC8FC\uBCC0\uC5D0\uC11C\uB9CC \uC18C\uC2EC\uD558\uAC8C
+      \uC2DC\uC704\uB97C \uD588\uC5C8\uB2E4."

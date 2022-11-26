@@ -6,12 +6,17 @@ namespace BeaverMurderCase.Common
 {
     public enum BgmType
     {
+        Bgm,
     }
     
     public enum ClipType
     {
         ButtonHover,
         Typing,
+        Die,
+        Thunder,
+        MoveScene,
+        Pop,
     }
     
     public class SoundData : ScriptableSingleton<SoundData>

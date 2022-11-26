@@ -1,4 +1,5 @@
-﻿using BeaverMurderCase.Dialogue;
+﻿using BeaverMurderCase.Common;
+using BeaverMurderCase.Dialogue;
 
 namespace BeaverMurderCase.GameBook.Pages
 {

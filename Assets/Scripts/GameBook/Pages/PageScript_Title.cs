@@ -39,6 +39,7 @@ namespace BeaverMurderCase.GameBook.Pages
                 Dialogue.DialogueManager.Instance.StartSpeechSet("title_opening 2");
                 await UniTask.WaitUntil(() => !Dialogue.DialogueManager.Instance.IsSpeeching);
 
+                SoundManager.PlaySfx(ClipType.Thunder);
                 await EffectManager.Instance.ScreenFlash(Color.white, 0.1f);
                 await UniTaskHelper.DelaySeconds(1.0f);
 
@@ -54,6 +55,7 @@ namespace BeaverMurderCase.GameBook.Pages
 
                 // Falsh Sound
                 EffectManager.Instance.ShakeScreen().Forget();
+                SoundManager.PlaySfx(ClipType.Thunder);
                 await EffectManager.Instance.ScreenFlash(Color.white, 0.1f);
                 dead_beaver.SetActive(false);
                 GameObject player = gameObject.transform.Find("player").gameObject;
