@@ -59,7 +59,7 @@ namespace BeaverMurderCase.Dialogue
             SoundManager.PlaySfx(ClipType.Typing);
         }
 
-        public void StartSpeechSet(string speechName)
+        public void StartSpeechSet(string speechName, bool clearScrollerState = true)
         {
             if (!_speechSets.TryGetValue(speechName, out var speech))
             {
@@ -67,13 +67,17 @@ namespace BeaverMurderCase.Dialogue
                 return;
             }
            
-            StartSpeechSet(speech);
+            StartSpeechSet(speech, clearScrollerState);
         }
 
-        public void StartSpeechSet(SpeechSet speechSet)
+        public void StartSpeechSet(SpeechSet speechSet, bool clearScrollerState = true)
         {
             ClearSpeech();
-            GameManager.Instance.SetScrollerState(false);
+            if (clearScrollerState)
+            {
+                GameManager.Instance.SetScrollerState(false);
+            }
+
             StartCoroutine(nameof(StartSpeechSetCo), speechSet);
         }
 

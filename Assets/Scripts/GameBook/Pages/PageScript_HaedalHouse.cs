@@ -33,5 +33,10 @@ namespace BeaverMurderCase.GameBook.Pages
         {
             DialogueManager.Instance.StartSpeechSet("HaedalHouse_Lamp");
         }
+        
+        public void OnClick_Exit()
+        {
+            DialogueManager.Instance.StartSpeechSet("HaedalHouse_Exit");
+        }
     }
 }
