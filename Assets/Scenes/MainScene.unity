@@ -4861,8 +4861,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<b><size=80>\uACF0\uC758 \uC2DD\uB7C9\uC744 \uD0D0\uB0B8 \uC8C4, \uC8FD\uC74C\uC73C\uB85C
-    \uBC1B\uC544\uB77C</size><b>"
+  m_text: "\uBAA8\uCF54\uCF54\uAC00 \uB4E4\uC5B4\uC788\uB2E4!\n<color=#00ffffff>\uBAA8\uCF54\uCF54\uB97C
+    \uC774\uB807\uAC8C \uC18C\uC911\uD788 \uC5EC\uAE30\uB294 \uD558\uB9C8\uB294 \uBC94\uC778\uC774
+    \uC544\uB2D0 \uAC83\uC774\uB2E4.</color>\n<color=yellow>>\uD558\uB9C8\uC758 \uC9D1\uC73C\uB85C
+    \uB3CC\uC544\uAC00\uB824\uBA74 6p \uB85C</color>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9f3fd0b1b920bc0428f10437dd979c70, type: 2}
   m_sharedMaterial: {fileID: 6574039171320571472, guid: 9f3fd0b1b920bc0428f10437dd979c70, type: 2}
@@ -6404,10 +6406,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: 09_HaedalHouse_Coffee
       objectReference: {fileID: 0}
-    - target: {fileID: 112759363880635536, guid: 730a3efa8f7f12c48938585d22faee25, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4880567323647153058, guid: 730a3efa8f7f12c48938585d22faee25, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6490,6 +6488,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4880567323647153058, guid: 730a3efa8f7f12c48938585d22faee25, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5611039754242342787, guid: 730a3efa8f7f12c48938585d22faee25, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5611039754242342787, guid: 730a3efa8f7f12c48938585d22faee25, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5611039754242342787, guid: 730a3efa8f7f12c48938585d22faee25, type: 3}
+      propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -8258,7 +8268,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7084779978266017923, guid: cad4d6d6db325fd46a83b067676e180f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cad4d6d6db325fd46a83b067676e180f, type: 3}
