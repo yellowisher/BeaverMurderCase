@@ -15,12 +15,12 @@ MonoBehaviour:
   Speeches:
   - Talker: 1
     Portrait: {fileID: 0}
-    Line: "2022\uC6D4 11\uC6D4 28\uC77C. \n\uD574\uCEE4\uD1A4\uC774 \uB05D\uB098\uB294
-      \uB0A0\uC774\uC5C8\uB2E4.\n"
+    Line: "2022\uC6D4 11\uC6D4 28\uC77C. \n<color=\"red\">\uBE44\uBC84 \uAC8C\uC784\uC7BC</color>\uC774
+      \uB05D\uB098\uB294 \uB0A0\uC774\uC5C8\uB2E4.\n"
   - Talker: 1
     Portrait: {fileID: 0}
-    Line: "\uC990\uAC70\uC6B4 \uB0A0\uC5D4 \uC990\uAC70\uC6B4 \uC220\uC774 \uD544\uC694\uD55C
-      \uBC95."
+    Line: "\uBE44\uBC84 \uAC8C\uC784\uC7BC\uC5D0\uC11C \uBAA8\uB378\uC77C\uC744 \uB05D\uB9C8\uCE58\uACE0
+      \uC9D1\uC73C\uB85C \uB3CC\uC544\uAC14\uC9C0."
   - Talker: 1
     Portrait: {fileID: 0}
-    Line: "\uC220\uC744 \uBA39\uACE0 \uB09C \uD6C4 \uB09C....\n"
+    Line: "\uBE44\uAC00 \uB0B4\uB9AC\uB294 \uC6B0\uC911\uCDA9\uD55C \uB0A0\uC774\uC5C8\uC5B4.."

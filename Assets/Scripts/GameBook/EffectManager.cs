@@ -27,14 +27,14 @@ namespace BeaverMurderCase.GameBook
         public async UniTask ScreenFlashReset() {
             await ScreenArea.DOColor(default, 0);
         }
-        public async UniTask ScreenFlash(Color color, float delay, bool asyncTrue = true) {
+        public async UniTask ScreenFlash(Color color, float delay, bool asyncTrue = true, Ease interpType=Ease.Linear) {
             
             if (asyncTrue) {
                 Debug.Log("hello");
-                await ScreenArea.DOColor(color, delay).SetEase(Ease.Linear);
+                await ScreenArea.DOColor(color, delay).SetEase(interpType);
             }
             else {
-                ScreenArea.DOColor(color, delay).SetEase(Ease.Linear);
+                ScreenArea.DOColor(color, delay).SetEase(interpType);
             }
         }
 
