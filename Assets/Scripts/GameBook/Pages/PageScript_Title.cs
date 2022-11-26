@@ -14,6 +14,11 @@ namespace BeaverMurderCase.GameBook.Pages
         protected override void Initialize()
         {
             _gameStartMessage.OnScroll.AddListener(OnScroll);
+            Dialogue.DialogueManager.Instance.StartSpeechSet("title_opening");
+        }
+
+        protected override void OnOpened() {
+            base.OnOpened();
         }
 
         private void OnScroll(Vector2 amount)

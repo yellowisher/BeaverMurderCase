@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using BeaverMurderCase.Common;
+using BeaverMurderCase.GameBook;
 using Cysharp.Threading.Tasks;
 using Febucci.UI;
 using NaughtyAttributes;
@@ -64,13 +65,14 @@ namespace BeaverMurderCase.Dialogue
                 Debug.LogError($"Cannot find speech name: {speechName}");
                 return;
             }
-            
+           
             StartSpeechSet(speech);
         }
 
         public void StartSpeechSet(SpeechSet speechSet)
         {
             ClearSpeech();
+            GameManager.Instance.SetScrollerState(false);
             StartCoroutine(nameof(StartSpeechSetCo), speechSet);
         }
 
