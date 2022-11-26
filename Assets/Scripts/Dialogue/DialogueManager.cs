@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using BeaverMurderCase.Common;
+using BeaverMurderCase.GameBook;
 using Cysharp.Threading.Tasks;
 using Febucci.UI;
 using NaughtyAttributes;
@@ -15,6 +16,7 @@ namespace BeaverMurderCase.Dialogue
         [SerializeField] private TextAnimatorPlayer _textAnimatorPlayer;
         [SerializeField] private Image _leftPortrait;
         [SerializeField] private Image _rightPortrait;
+        [SerializeField] private GameObject _goNextCursor;
 
         private bool _didInput;
         private bool _allTextShowed;
@@ -77,6 +79,7 @@ namespace BeaverMurderCase.Dialogue
         private IEnumerator StartSpeechSetCo(SpeechSet speechSet)
         {
             IsSpeeching = true;
+            GameManager.Instance.BlockPageInput = true;
             for (int i = 0; i < speechSet.Speeches.Count; i++)
             {
                 var speech = speechSet.Speeches[i];
@@ -95,6 +98,7 @@ namespace BeaverMurderCase.Dialogue
                 _textAnimator.SetText(speech.Line, true);
                 _textAnimatorPlayer.StartShowingText();
                 _allTextShowed = false;
+                _goNextCursor.SetActive(false);
 
                 _didInput = false;
                 while (!_allTextShowed)
@@ -109,11 +113,13 @@ namespace BeaverMurderCase.Dialogue
 
                 if (i != speechSet.Speeches.Count - 1)
                 {
+                    _goNextCursor.SetActive(true);
                     _didInput = false;
                     yield return new WaitUntil(() => _didInput);       
                 }
             }
 
+            GameManager.Instance.BlockPageInput = false;
             IsSpeeching = false;
             Debug.Log($"Speech {speechSet.name} done");
         }
@@ -122,6 +128,7 @@ namespace BeaverMurderCase.Dialogue
         {
             StopCoroutine(nameof(StartSpeechSetCo));
             _textAnimator.SetText(string.Empty, true);
+            _goNextCursor.SetActive(false);
 
             DisablePortrait(_leftPortrait);
             DisablePortrait(_rightPortrait);

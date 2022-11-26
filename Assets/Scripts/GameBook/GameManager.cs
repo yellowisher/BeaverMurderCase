@@ -10,10 +10,23 @@ namespace BeaverMurderCase.GameBook
     {
         [SerializeField] private Scroller _scroller;
         [SerializeField] private RectMask2D _scrollerMask;
+        [SerializeField] private CanvasGroup _canvasGroup;
         
         public Canvas RootCanvas;
         
         public bool IsScrollerMode { get; private set; }
+
+        private bool _blockPageInput;
+
+        public bool BlockPageInput
+        {
+            get => _blockPageInput;
+            set
+            {
+                _blockPageInput = value;
+                _canvasGroup.interactable = !_blockPageInput;
+            }
+        }
 
         private void Start()
         {
