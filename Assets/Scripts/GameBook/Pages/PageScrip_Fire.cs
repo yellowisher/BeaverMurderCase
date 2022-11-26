@@ -17,12 +17,12 @@ namespace BeaverMurderCase.GameBook.Pages
             _fire.OnScroll.AddListener(OnScroll);    
         }
 
-        protected async override void OnOpened() {
-        }
+        protected async override void OnOpened() { }
 
         public void OnScroll(Vector2 amount)
         {
             _accumulated += Mathf.Abs(amount.x);
+
             if (_accumulated > _goal)
             {
                 if (BookManager.Instance.UnlockPage(_page.PageNumber + 1))
