@@ -10,11 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7097c8aa76da4dc6b1a0b0a46c877d2e, type: 3}
-  m_Name: HaedalHouse_Intro
+  m_Name: HamaHouse_Exit
   m_EditorClassIdentifier: 
   Speeches:
   - Talker: 1
     Portrait: {fileID: 0}
-    Line: "\uD574\uB2EC\uC758 \uC9D1\uC5D0 \uB3C4\uCC29\uD588\uB2E4.\n\uC218\uC0C1\uD574\uBCF4\uC774\uB294
-      \uBB3C\uAC74\uB4E4\uC774 \uB9CE\uC774 \uBCF4\uC778\uB2E4.\n\uB7A8\uD504, \uBC40\uC220,
-      \uCEE4\uD53C. \uBB34\uC5C7\uC744 \uD655\uC778\uD560\uAE4C?"
+    Line: "<color=yellow>>\uBC16\uC73C\uB85C \uB098\uAC00\uB824\uBA74 3p \uB85C</color>"

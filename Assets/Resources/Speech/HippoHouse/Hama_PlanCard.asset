@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7097c8aa76da4dc6b1a0b0a46c877d2e, type: 3}
-  m_Name: LookDummbel
+  m_Name: Hama_PlanCard
   m_EditorClassIdentifier: 
   Speeches:
   - Talker: 1
     Portrait: {fileID: 0}
-    Line: "\uADFC\uB825 \uC6B4\uB3D9\uC5D0 \uC0AC\uC6A9\uB418\uB294 \uB364\uBCA8\uC774\uB2E4.\n\uC591\uD314\uC744
-      \uC0AC\uC6A9\uD574\uB3C4 \uB3C4\uC800\uD788 \uB4E4 \uC218\uAC00 \uC5C6\uB2E4."
+    Line: "\uCCA0\uAC70 \uC2DC\uC704 \uB54C \uC0AC\uC6A9\uB41C \uD50C\uB79C\uCE74\uB4DC\uB2E4.\n\uB3C4\uB300\uCCB4
+      \uC774\uAC78 \uBB34\uC2A8 \uD798\uC73C\uB85C \uD63C\uC790 \uB4E4\uACE0 \uD718\uB450\uB978
+      \uAC78\uAE4C.\n<color=yellow>>\uD558\uB9C8\uC758 \uC9D1\uC73C\uB85C \uB3CC\uC544\uAC00\uB824\uBA74
+      6p \uB85C</color>"

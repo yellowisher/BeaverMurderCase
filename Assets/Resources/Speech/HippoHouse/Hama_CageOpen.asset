@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7097c8aa76da4dc6b1a0b0a46c877d2e, type: 3}
-  m_Name: GoScretDoor
+  m_Name: Hama_CageOpen
   m_EditorClassIdentifier: 
   Speeches:
   - Talker: 1
     Portrait: {fileID: 0}
-    Line: "\uBB34\uC5B8\uAC00 \uC788\uC744\uB4EF\uD55C \uBC29\uC774\uB2E4.\n\uD55C
-      \uBC88 \uB4E4\uC5B4\uAC00\uB3C4 \uAD1C\uCC2E\uACA0\uC9C0..?"
+    Line: "\uAE08\uACE0\uAC00 \uC11C\uC11C\uD788 \uC5F4\uB9AC\uACE0, \uC218\uC0C1\uD55C
+      \uC78E\uC0AC\uADC0\uAC00 \uBCF4\uC778\uB2E4."
