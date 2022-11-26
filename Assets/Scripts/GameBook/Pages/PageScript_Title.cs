@@ -11,8 +11,8 @@ namespace BeaverMurderCase.GameBook.Pages
     public class PageScript_Title : PageScript
     {
         [SerializeField] private ScrollObject _gameStartMessage;
-        [SerializeField] private float _goal;
         [SerializeField] private bool _skip;
+        [SerializeField] private float _goal;
 
         private float _minStartPoint;
         private float _accumulated;
