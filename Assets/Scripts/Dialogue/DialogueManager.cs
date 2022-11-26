@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using BeaverMurderCase.Common;
 using BeaverMurderCase.GameBook;
 using Cysharp.Threading.Tasks;
+using DG.Tweening;
 using Febucci.UI;
 using NaughtyAttributes;
 using UnityEngine;
@@ -100,6 +101,7 @@ namespace BeaverMurderCase.Dialogue
                     SetPortrait(_rightPortrait, speech.Portrait);
                 }
                 
+                PlayEventAfterDelay(speech.EventType, speech.EventDelay);
                 _textAnimator.SetText(speech.Line, true);
                 _textAnimatorPlayer.StartShowingText();
                 _allTextShowed = false;
@@ -127,6 +129,23 @@ namespace BeaverMurderCase.Dialogue
             GameManager.Instance.BlockPageInput = false;
             IsSpeeching = false;
             Debug.Log($"Speech {speechSet.name} done");
+        }
+
+        private async void PlayEventAfterDelay(SpeechEventType type, float delay)
+        {
+            if (type == SpeechEventType.None) return;
+            
+            await UniTaskHelper.DelaySeconds(delay);
+            switch (type)
+            {
+                case SpeechEventType.Die:
+                {
+                    EffectManager.Instance.ShakeScreen().Forget();
+                    await EffectManager.Instance.ScreenFlash(new Color(1f, 0, 0, 0.75f), 0.75f);
+                    await EffectManager.Instance.ScreenFlash(new Color(0, 0, 0, 0), 0.75f);
+                    break;
+                }
+            }
         }
 
         public void ClearSpeech()

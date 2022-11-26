@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: OfficeSpray
   m_EditorClassIdentifier: 
   Speeches:
-  - Talker: 1
+  - EventDelay: 0
+    EventType: 0
+    Talker: 1
     Portrait: {fileID: 0}
-    Line: "\uAC70\uB300\uD55C \uD560\uD038 \uC790\uAD6D\uC774 \uB0A8\uC544\uC788\uB2E4.\n<color=yellow>>\uC0AC\uBB34\uC2E4\uB85C
+    Line: "\uBC14\uB2E5 \uD55C \uAD6C\uC11D\uC5D0 \uAC70\uB300\uD55C \uD560\uD038
+      \uC790\uAD6D\uC774 \uB0A8\uC544\uC788\uB2E4.\n<color=yellow>>\uC0AC\uBB34\uC2E4\uB85C
       \uB3CC\uC544\uAC00\uB824\uBA74 2p \uB85C</color>"

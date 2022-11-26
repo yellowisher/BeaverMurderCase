@@ -13,16 +13,22 @@ MonoBehaviour:
   m_Name: BearHouseRefrigerator
   m_EditorClassIdentifier: 
   Speeches:
-  - Talker: 1
+  - EventDelay: 0
+    EventType: 0
+    Talker: 1
     Portrait: {fileID: 0}
     Line: "\uB0C9\uC7A5\uACE0\uB97C \uC5F4\uC5B4\uBCF4\uB824\uB294 \uCC30\uB098,
       \uB4A4\uCABD\uC5D0\uC11C \uC131\uD07C\uC131\uD07C \uAC77\uB294 \uC18C\uB9AC\uAC00
       \uB4E4\uB824\uC628\uB2E4.\n"
-  - Talker: 1
+  - EventDelay: 1.5
+    EventType: 1
+    Talker: 1
     Portrait: {fileID: 0}
-    Line: "\uACF0\uC758 \uC2DD\uB7C9\uC744 \uD0D0\uB0B8 \uC8C4, \uC8FD\uC74C\uC73C\uB85C
-      \uBC1B\uC544\uB77C\n<color=red><shake>\uB2F9\uC2E0\uC740 \uC8FD\uC5C8\uC2B5\uB2C8\uB2E4.</shake></color>"
-  - Talker: 1
+    Line: "<b><size=70>\uACF0\uC758 \uC2DD\uB7C9\uC744 \uD0D0\uB0B8 \uC8C4, \uC8FD\uC74C\uC73C\uB85C
+      \uBC1B\uC544\uB77C!</size><b>\n<color=red><shake>\uB2F9\uC2E0\uC740 \uC8FD\uC5C8\uC2B5\uB2C8\uB2E4.</shake></color>"
+  - EventDelay: 0
+    EventType: 0
+    Talker: 1
     Portrait: {fileID: 0}
     Line: "<color=yellow>>\uACF0\uC758 \uC9D1\uC73C\uB85C \uB3CC\uC544\uAC00\uB824\uBA74
       7p \uB85C</color>"

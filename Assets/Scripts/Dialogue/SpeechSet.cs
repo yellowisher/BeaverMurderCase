@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace BeaverMurderCase.Dialogue
 {
@@ -10,9 +11,18 @@ namespace BeaverMurderCase.Dialogue
         public List<Speech> Speeches;
     }
 
+    public enum SpeechEventType
+    {
+        None,
+        Die,
+    }
+    
     [Serializable]
     public class Speech
     {
+        public float EventDelay;
+        public SpeechEventType EventType;
+        
         public const int TalkerLeft = 0;
         public const int NoTalker = 1;
         public const int TalkerRight = 2;
