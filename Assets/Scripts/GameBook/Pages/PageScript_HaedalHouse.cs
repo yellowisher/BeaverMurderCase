@@ -1,6 +1,8 @@
 ﻿using BeaverMurderCase.Common;
 using BeaverMurderCase.Dialogue;
 using Cysharp.Threading.Tasks;
+using DG.Tweening;
+using UnityEngine.UI;
 
 namespace BeaverMurderCase.GameBook.Pages
 {
