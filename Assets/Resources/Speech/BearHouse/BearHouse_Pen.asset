@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7097c8aa76da4dc6b1a0b0a46c877d2e, type: 3}
-  m_Name: HaedalHouseCoffee
+  m_Name: BearHouse_Pen
   m_EditorClassIdentifier: 
   Speeches:
   - Talker: 1
     Portrait: {fileID: 0}
-    Line: "\uB0B4\uAC00 \uC8FD\uAE30 \uC804\uC5D0 \uB9C8\uC2E0 \uCEE4\uD53C\uB2E4.\n<color=yellow>>\uD574\uB2EC\uC758
-      \uC9D1\uC73C\uB85C \uB3CC\uC544\uAC00\uB824\uBA74 5p \uB85C</color>"
+    Line: "\uBD80\uB7EC\uC9C4 \uAE43\uD39C\uC774 \uC788\uB2E4.\n<color=yellow>>\uAE43\uD39C\uC744
+      \uD655\uC778\uD558\uB824\uBA74 17p \uB85C</color>"
