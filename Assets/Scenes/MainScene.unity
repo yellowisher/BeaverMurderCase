@@ -3076,6 +3076,7 @@ MonoBehaviour:
   _leftPortrait: {fileID: 223252148}
   _rightPortrait: {fileID: 1634032078}
   _goNextCursor: {fileID: 464268142}
+  _allTextShowed: 0
   _testSpeechSet: {fileID: 11400000, guid: 2388f30536f49be4782c823a09bde74a, type: 2}
 --- !u!1 &621177613
 GameObject:
@@ -7059,7 +7060,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameStartMessage: {fileID: 621177615}
   _goal: 3
-  _skip: 1
+  _skip: 0
 --- !u!1 &1607278515
 GameObject:
   m_ObjectHideFlags: 0
