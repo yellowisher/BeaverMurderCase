@@ -7771,7 +7771,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1602706568, guid: 0d3837d1b9c0b6f438be89fd35a562a6, type: 3}
       propertyPath: _skip
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1924314265003900981, guid: 0d3837d1b9c0b6f438be89fd35a562a6, type: 3}
       propertyPath: m_Pivot.x

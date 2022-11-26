@@ -31,15 +31,13 @@ namespace BeaverMurderCase.GameBook.Pages
             if (firstVisit) {
                 firstVisit = false;
                 await UniTaskHelper.DelaySeconds(0.5f);
-
-                Dialogue.DialogueManager.Instance.StartSpeechSet("title_opening 1");
-                await UniTask.WaitUntil(() => !Dialogue.DialogueManager.Instance.IsSpeeching);
-
+                
                 await EffectManager.Instance.ScreenFlash(Color.white, 0.1f);
                 await UniTaskHelper.DelaySeconds(0.5f);
                 await EffectManager.Instance.ScreenFlash(new Color(0, 0, 0, 0), 2f);
 
-                await UniTaskHelper.DelaySeconds(1.0f);
+                Dialogue.DialogueManager.Instance.StartSpeechSet("title_opening 2");
+                await UniTask.WaitUntil(() => !Dialogue.DialogueManager.Instance.IsSpeeching);
 
                 await EffectManager.Instance.ScreenFlash(Color.white, 0.1f);
                 await UniTaskHelper.DelaySeconds(1.0f);
@@ -49,10 +47,6 @@ namespace BeaverMurderCase.GameBook.Pages
                 dead_beaver.SetActive(true);
                 await EffectManager.Instance.ScreenFlash(new Color(1.0f, 0, 0, 0.2f), 3f);
 
-                Dialogue.DialogueManager.Instance.StartSpeechSet("title_opening 2");
-                await UniTask.WaitUntil(() => !Dialogue.DialogueManager.Instance.IsSpeeching);
-
-                await UniTaskHelper.DelaySeconds(1.0f);
                 Dialogue.DialogueManager.Instance.StartSpeechSet("title_opening 3");
                 await UniTask.WaitUntil(() => !Dialogue.DialogueManager.Instance.IsSpeeching);
 

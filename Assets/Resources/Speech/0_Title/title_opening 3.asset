@@ -13,10 +13,19 @@ MonoBehaviour:
   m_Name: title_opening 3
   m_EditorClassIdentifier: 
   Speeches:
-  - Talker: 1
+  - EventDelay: 0
+    EventType: 0
+    Talker: 1
+    Portrait: {fileID: 0}
+    Line: "<color=red>\uADF8 \uB0A0 \uC800\uB141 \uB09C \uC8FD\uACE0 \uB9D0\uC558\uB2E4.</color>"
+  - EventDelay: 0
+    EventType: 0
+    Talker: 1
     Portrait: {fileID: 0}
     Line: ".... \uBB50? \uADF8\uB7F0\uB370 \uC5B4\uB5BB\uAC8C \uB300\uD654\uD558\uACE0
       \uC788\uB294\uAC70\uB0D0\uACE0?"
-  - Talker: 1
+  - EventDelay: 0
+    EventType: 0
+    Talker: 1
     Portrait: {fileID: 0}
     Line: "\uADF8\uAC74..."
