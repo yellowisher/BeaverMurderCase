@@ -30,7 +30,6 @@ namespace BeaverMurderCase.GameBook
         public async UniTask ScreenFlash(Color color, float delay, bool asyncTrue = true, Ease interpType=Ease.Linear) {
             
             if (asyncTrue) {
-                Debug.Log("hello");
                 await ScreenArea.DOColor(color, delay).SetEase(interpType);
             }
             else {
@@ -48,6 +47,13 @@ namespace BeaverMurderCase.GameBook
         public void TestShakeScreen()
         {
             ShakeScreen().Forget();
+        }
+
+        [Button]
+        public async void ShakeAndDie() {
+            ShakeScreen().Forget();
+            await ScreenFlash(Color.red, 0.3f, true, Ease.InCubic);
+            await ScreenFlash(new Color(0,0,0,0), 2f, true, Ease.Linear);
         }
     }
 }

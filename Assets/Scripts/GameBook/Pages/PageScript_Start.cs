@@ -16,6 +16,7 @@ namespace BeaverMurderCase.GameBook.Pages
 
         private float _minStartPoint;
         private float _accumulated;
+        private bool _first_time = true;
 
         protected override async void Initialize()
         {
@@ -46,6 +47,13 @@ namespace BeaverMurderCase.GameBook.Pages
                 player_bar.SetActive(true);
                 await UniTaskHelper.DelaySeconds(1.5f);
                 await EffectManager.Instance.ScreenFlash(new Color(0, 0, 0, 0.2f), 2.5f);
+
+                if (_first_time) {
+                    _first_time = true;
+                    Dialogue.DialogueManager.Instance.StartSpeechSet("start_dialog 3");
+                    await UniTask.WaitUntil(() => !Dialogue.DialogueManager.Instance.IsSpeeching);
+                }
+
 
                 Dialogue.DialogueManager.Instance.StartSpeechSet("start_dialog 2");
                 await UniTask.WaitUntil(() => !Dialogue.DialogueManager.Instance.IsSpeeching);

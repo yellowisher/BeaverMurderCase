@@ -59,6 +59,7 @@ namespace BeaverMurderCase.GameBook.Pages
                 await UniTaskHelper.DelaySeconds(0.5f);
 
                 // Falsh Sound
+                EffectManager.Instance.ShakeScreen().Forget();
                 await EffectManager.Instance.ScreenFlash(Color.white, 0.1f);
                 dead_beaver.SetActive(false);
                 GameObject player = gameObject.transform.Find("player").gameObject;
