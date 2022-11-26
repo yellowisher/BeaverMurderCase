@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7097c8aa76da4dc6b1a0b0a46c877d2e, type: 3}
+  m_Name: BeaverOffice
+  m_EditorClassIdentifier: 
+  Speeches:
+  - Talker: 1
+    Portrait: {fileID: 0}
+    Line: "\uC774\uC81C\uB294 \uB354 \uC774\uC0C1 \uC8FC\uC778 \uC5C6\uB294 \uC0AC\uBB34\uC18C\uB2E4."
+  - Talker: 1
+    Portrait: {fileID: 0}
+    Line: "\uC124\uACC4 \uB3C4\uBA74\uACFC h4 \uC5F0\uD544\uB4E4\uACFC \uCEF4\uD37C\uC2A4\uAC00
+      \uB110\uBD80\uB7EC\uC838 \uC788\uACA0\uC9C0."
+  - Talker: 1
+    Portrait: {fileID: 0}
+    Line: "\uCEE4\uD53C\uB97C \uD55C\uC794\uD558\uBA74\uC11C \uC77C\uC744 \uC2DC\uC791\uD558\uACE4
+      \uD588\uB294\uB370...."
+  - Talker: 1
+    Portrait: {fileID: 0}
+    Line: "\uCD5C\uADFC \uB310 \uACF5\uC0AC\uB54C\uBB38\uC5D0 \uBD88\uB9CC\uC744
+      \uD45C\uD558\uB294 \uB3D9\uBB3C\uB4E4\uC774 \uB9CE\uC544 \uAF64 \uC2DC\uB044\uB7EC\uC6E0\uB2E4."
