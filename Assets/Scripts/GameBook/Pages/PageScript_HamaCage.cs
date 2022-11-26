@@ -25,7 +25,7 @@ namespace BeaverMurderCase.GameBook.Pages
         protected override void OnOpened()
         {
             _value = 0;
-            _door.rotation = Quaternion.identity;
+            _door.localRotation = Quaternion.identity;
             _isOpen = false;
             _mococoAnimation.DORewind();
             
@@ -40,10 +40,11 @@ namespace BeaverMurderCase.GameBook.Pages
             float rotate = Mathf.InverseLerp(0, _goal, _value);
             rotate *= _maxRotate;
             
-            _door.rotation = Quaternion.Euler(0, rotate, 0);
+            _door.localRotation = Quaternion.Euler(0, rotate, 0);
 
             if (!_isOpen && _value >= _goal * 0.8f)
             {
+                _isOpen = true;
                 DialogueManager.Instance.StartSpeechSet("Hama_CageOpen", false);
             }
         }

@@ -281,7 +281,20 @@ MonoBehaviour:
   _target: {fileID: 0}
   _onClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5670476140214676844}
+        m_TargetAssemblyTypeName: BeaverMurderCase.GameBook.Pages.PageScript_HamaCage,
+          Assembly-CSharp
+        m_MethodName: OnClick_Mococo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _onEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -317,14 +330,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2607857117907974790}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1585658065291052643}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 322, y: -5}
@@ -538,7 +551,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7615974070520446837}
-  - component: {fileID: 7615974070520446834}
   m_Layer: 5
   m_Name: cage
   m_TagString: Untagged
@@ -570,44 +582,6 @@ RectTransform:
   m_AnchoredPosition: {x: -418, y: -26}
   m_SizeDelta: {x: 309.4, y: 309.4}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7615974070520446834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7615974070520446836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b47c277d39e416e94926e08a34dd50f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _target: {fileID: 0}
-  _onClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: BeaverMurderCase.GameBook.Pages.PageScript_HippoHouse,
-          Assembly-CSharp
-        m_MethodName: OnClick_SecretDoor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _onEnter:
-    m_PersistentCalls:
-      m_Calls: []
-  _onExit:
-    m_PersistentCalls:
-      m_Calls: []
-  _duration: 0.1
-  _scaleAdditionOnOver: 0.15
-  _scaleAdditionOnPress: -0.15
 --- !u!1 &7926196914394973866
 GameObject:
   m_ObjectHideFlags: 0
