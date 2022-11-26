@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: SoundData
   m_EditorClassIdentifier: 
   _bgmPairs: []
-  _clipPairs: []
+  _clipPairs:
+  - Type: 1
+    Clip: {fileID: 8300000, guid: 0dae724cb893d234693f768c9f4c20b9, type: 3}
