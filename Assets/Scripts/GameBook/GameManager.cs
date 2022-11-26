@@ -1,5 +1,6 @@
 ﻿using BeaverMurderCase.Common;
 using BeaverMurderCase.GameBook.Gimmick;
+using Febucci.UI.Core;
 using UnityEngine;
 
 namespace BeaverMurderCase.GameBook
@@ -8,11 +9,14 @@ namespace BeaverMurderCase.GameBook
     {
         [SerializeField] private Scroller _scroller;
         
+        public Canvas RootCanvas;
+        
         public bool IsScrollerMode { get; private set; }
 
         private void Start()
         {
             _scroller.SetActive(false);
+            TAnimBuilder.InitializeGlobalDatabase();
         }
 
         private void Update()
@@ -25,10 +29,14 @@ namespace BeaverMurderCase.GameBook
 
         public void ToggleScroller()
         {
-            bool scrollerMode = !IsScrollerMode;
-            _scroller.SetActive(scrollerMode);
+            SetScrollerState(!IsScrollerMode);
+        }
+
+        public void SetScrollerState(bool isScrollerMode)
+        {
+            _scroller.SetActive(isScrollerMode);
             
-            IsScrollerMode = scrollerMode;
+            IsScrollerMode = isScrollerMode;
         }
     }
 }

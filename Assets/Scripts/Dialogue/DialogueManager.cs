@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
 using BeaverMurderCase.Common;
 using Febucci.UI;
 using NaughtyAttributes;
@@ -14,6 +14,9 @@ namespace BeaverMurderCase.Dialogue
 
         private bool _didInput;
         private bool _allTextShowed;
+        private readonly Dictionary<string, SpeechSet> _speechSets = new();
+        
+        public bool IsSpeeching { get; private set; }
 
         protected override void Awake()
         {
@@ -22,6 +25,12 @@ namespace BeaverMurderCase.Dialogue
             _textAnimator.SetText(string.Empty, true);
             _textAnimatorPlayer.onTextShowed.AddListener(() => _allTextShowed = true);
             _textAnimatorPlayer.onCharacterVisible.AddListener(OnCharacterVisible);
+
+            var speeches = Resources.LoadAll<SpeechSet>("Speech");
+            foreach (var speech in speeches)
+            {
+                _speechSets.Add(speech.name, speech);
+            }
         }
 
         private void Update()
@@ -32,21 +41,39 @@ namespace BeaverMurderCase.Dialogue
             }
         }
 
+        public void OnClick_Panel()
+        {
+            _didInput = true;
+        }
+
         private void OnCharacterVisible(char ch)
         {
             SoundManager.PlaySfx(ClipType.Typing);
         }
 
-        public void PlaySpeechSet(SpeechSet speechSet)
+        public void StartSpeechSet(string speechName)
         {
-            StopCoroutine(nameof(PlaySpeechSetCo));
-            StartCoroutine(nameof(PlaySpeechSetCo), speechSet);
+            if (!_speechSets.TryGetValue(speechName, out var speech))
+            {
+                Debug.LogError($"Cannot find speech name: {speechName}");
+                return;
+            }
+            
+            StartSpeechSet(speech);
         }
 
-        private IEnumerator PlaySpeechSetCo(SpeechSet speechSet)
+        public void StartSpeechSet(SpeechSet speechSet)
         {
-            foreach (var speech in speechSet.Speeches)
+            StopCoroutine(nameof(StartSpeechSetCo));
+            StartCoroutine(nameof(StartSpeechSetCo), speechSet);
+        }
+
+        private IEnumerator StartSpeechSetCo(SpeechSet speechSet)
+        {
+            IsSpeeching = true;
+            for (int i = 0; i < speechSet.Speeches.Count; i++)
             {
+                var speech = speechSet.Speeches[i];
                 _textAnimator.SetText(speech.Line, true);
                 _textAnimatorPlayer.StartShowingText();
                 _allTextShowed = false;
@@ -62,9 +89,21 @@ namespace BeaverMurderCase.Dialogue
                     yield return null;
                 }
 
-                _didInput = false;
-                yield return new WaitUntil(() => _didInput);
+                if (i != speechSet.Speeches.Count - 1)
+                {
+                    _didInput = false;
+                    yield return new WaitUntil(() => _didInput);       
+                }
             }
+
+            IsSpeeching = false;
+            Debug.Log("speech done");
+        }
+
+        public void ClearSpeech()
+        {
+            StopCoroutine(nameof(StartSpeechSetCo));
+            _textAnimator.SetText(string.Empty, true);
         }
         
         [SerializeField] private SpeechSet _testSpeechSet;
@@ -72,7 +111,7 @@ namespace BeaverMurderCase.Dialogue
         [Button]
         public void StartTestSpeech()
         {
-            PlaySpeechSet(_testSpeechSet);
+            StartSpeechSet(_testSpeechSet);
         }
     }
 }

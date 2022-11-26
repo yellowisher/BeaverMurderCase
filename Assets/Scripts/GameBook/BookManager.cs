@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using BeaverMurderCase.Common;
+using BeaverMurderCase.Dialogue;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using NaughtyAttributes;
@@ -57,16 +58,21 @@ namespace BeaverMurderCase.GameBook
             OpenPage(0);
         }
 
-        public void UnlockPage(int page)
+        public bool UnlockPage(int page)
         {
+            if (Pages[page].IsUnlocked) return false;
+            
             Pages[page].IsUnlocked = true;
             PageButtons[page].OnPageUnlocked();
+
+            return true;
         }
 
         public async void OpenPage(int page)
         {
             if (_isTransitioning) return;
             if (page == CurrentPage) return;
+            if (DialogueManager.Instance.IsSpeeching) return;
 
             _isTransitioning = true;
             if (CurrentPage != -1)
@@ -75,10 +81,12 @@ namespace BeaverMurderCase.GameBook
             }
             
             PageButtons[page].SetCurrentPage(true);
+            GameManager.Instance.SetScrollerState(false);
 
             if (CurrentPage != -1)
             {
                 CloseCurrentPage();
+                DialogueManager.Instance.ClearSpeech();
                 await UniTaskHelper.DelaySeconds(_fadeDelay);
             }
 
