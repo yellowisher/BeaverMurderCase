@@ -11,7 +11,11 @@ namespace BeaverMurderCase.GameBook.Pages
     public class PageScript_Title : PageScript
     {
         [SerializeField] private ScrollObject _gameStartMessage;
+<<<<<<< HEAD
         [SerializeField] private float _goal;
+=======
+        [SerializeField] private bool _skip;
+>>>>>>> 8f57058713a563ca72042919585a23be88931612
 
         private float _minStartPoint;
         private float _accumulated;
@@ -20,6 +24,11 @@ namespace BeaverMurderCase.GameBook.Pages
 
         protected override async void Initialize()
         {
+            if (Application.isEditor && _skip)
+            {
+                return;
+            }
+                
             _gameStartMessage.OnScroll.AddListener(OnScroll);
 
             if (firstVisit) {

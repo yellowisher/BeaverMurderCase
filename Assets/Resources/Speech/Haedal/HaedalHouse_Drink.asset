@@ -15,5 +15,5 @@ MonoBehaviour:
   Speeches:
   - Talker: 1
     Portrait: {fileID: 0}
-    Line: "\uBC40\uC220\uC774\uB2E4. \uB69C\uAED1\uC774 \uB2E8\uB2E8\uD788 \uB2EB\uD600\uC788\uB2E4.\n<color=yellow>\uBC40\uC220\uC744
+    Line: "\uBC40\uC220\uC774\uB2E4. \uB69C\uAED1\uC774 \uB2E8\uB2E8\uD788 \uB2EB\uD600\uC788\uB2E4.\n<color=yellow>>\uBC40\uC220\uC744
       \uD655\uC778\uD558\uB824\uBA74 10p \uB85C</color>"

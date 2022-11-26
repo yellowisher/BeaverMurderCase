@@ -16,5 +16,5 @@ MonoBehaviour:
   - Talker: 1
     Portrait: {fileID: 0}
     Line: "\uD3C9\uBC94\uD55C \uC54C\uCF5C\uB7A8\uD504\uB2E4. \uC0AC\uC6A9\uD55C
-      \uD754\uC801\uC774 \uBCF4\uC778\uB2E4.\n<color=yellow>\uB7A8\uD504\uB97C \uD655\uC778\uD558\uB824\uBA74
+      \uD754\uC801\uC774 \uBCF4\uC778\uB2E4.\n<color=yellow>>\uB7A8\uD504\uB97C \uD655\uC778\uD558\uB824\uBA74
       11p \uB85C</color>"

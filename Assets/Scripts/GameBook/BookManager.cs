@@ -59,6 +59,11 @@ namespace BeaverMurderCase.GameBook
             OpenPage(0);
         }
 
+        public bool IsUnlocked(int pageNumber)
+        {
+            return Pages[pageNumber].IsUnlocked;
+        }
+        
         public bool UnlockPage(int page)
         {
             if (Pages[page].IsUnlocked) return false;

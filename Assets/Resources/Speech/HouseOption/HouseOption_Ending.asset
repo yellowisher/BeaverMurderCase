@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7097c8aa76da4dc6b1a0b0a46c877d2e, type: 3}
-  m_Name: HaedalHouse_Coffee
+  m_Name: HouseOption_Ending
   m_EditorClassIdentifier: 
   Speeches:
   - Talker: 1
     Portrait: {fileID: 0}
-    Line: "\uC774\uBBF8 \uC2DD\uC5B4\uBC84\uB9B0 \uCEE4\uD53C\uB2E4.\n<color=yellow>>\uCEE4\uD53C\uB97C
-      \uD655\uC778\uD558\uB824\uBA74 9p \uB85C</color>"
+    Line: "\uC870\uC0AC\uB294 \uCDA9\uBD84\uD788 \uC9C4\uD589\uD55C\uAC83 \uAC19\uB2E4.\n\uC774\uC81C
+      \uBC94\uC778\uC5D0\uAC8C \uBCF5\uC218\uB97C \uD560 \uC2DC\uAC04\uC774\uB2E4.\n<color=yellow>>\uBC94\uC778\uC744
+      \uC9C0\uBAA9\uD558\uB824\uBA74 18p \uB85C</color>"
