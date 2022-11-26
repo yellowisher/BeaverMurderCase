@@ -1,4 +1,5 @@
-﻿using BeaverMurderCase.GameBook.Pages;
+﻿using BeaverMurderCase.GameBook.Gimmick;
+using BeaverMurderCase.GameBook.Pages;
 using UnityEngine;
 
 namespace BeaverMurderCase.GameBook
@@ -6,8 +7,11 @@ namespace BeaverMurderCase.GameBook
     public class Page : MonoBehaviour
     {
         [SerializeField] private CanvasGroup _canvasGroup;
+        public ScrollerType ScrollerType; 
         
         public bool IsUnlocked { get; set; }
+        public int PageNumber { get; private set; }
+        
         public CanvasGroup CanvasGroup => _canvasGroup;
 
         private PageScript _pageScript;
@@ -15,6 +19,11 @@ namespace BeaverMurderCase.GameBook
         private void Awake()
         {
             _pageScript = GetComponentInChildren<PageScript>();
+        }
+
+        public void Initialize(int pageNumber)
+        {
+            PageNumber = pageNumber;
         }
 
         public void Open()

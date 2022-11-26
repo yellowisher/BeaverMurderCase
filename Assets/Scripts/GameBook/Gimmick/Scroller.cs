@@ -1,20 +1,45 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 namespace BeaverMurderCase.GameBook.Gimmick
 {
+    public enum ScrollerType
+    {
+        Fire,
+        Valve,
+    }
+
+    [Serializable]
+    public class ScrollerPair
+    {
+        public ScrollerType Type;
+        public GameObject GameObject;
+    } 
+    
     public class Scroller : MonoBehaviour
     {
         [SerializeField] private float _yIgnoranceRate;
+        [SerializeField] private List<ScrollerPair> _pairs;
 
+        private Dictionary<ScrollerType, GameObject> _scrollerObjects = new();
         private List<ScrollObject> _scrollObjects;
         private Bounds _prevScrollerBounds;
+
+        private void Awake()
+        {
+            foreach (var pair in _pairs)
+            {
+                _scrollerObjects.Add(pair.Type, pair.GameObject);
+            }
+        }
 
         public void SetActive(bool isActive)
         {
             gameObject.SetActive(isActive);
 
+            Cursor.visible = !isActive;
             if (isActive)
             {
                 _scrollObjects = FindObjectsOfType<ScrollObject>().ToList();
@@ -24,11 +49,15 @@ namespace BeaverMurderCase.GameBook.Gimmick
 
         private void Update()
         {
-            var screenPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            screenPosition.z = 0;
-            transform.position = screenPosition;
+            foreach (var pair in _scrollerObjects)
+            {
+                pair.Value.SetActive(BookManager.Instance.CurrentPage.ScrollerType == pair.Key);
+            }
+            
+            var root = GameManager.Instance.RootCanvas.transform as RectTransform;
+            RectTransformUtility.ScreenPointToWorldPointInRectangle(root, Input.mousePosition, Camera.main, out var worldPoint);
 
-            var root = GameManager.Instance.RootCanvas.transform;
+            transform.position = worldPoint;
             var scrollerRt = transform as RectTransform;
             var currentBounds = RectTransformUtility.CalculateRelativeRectTransformBounds(root, scrollerRt); 
             
@@ -59,7 +88,7 @@ namespace BeaverMurderCase.GameBook.Gimmick
             float objectYMin = targetBounds.center.y - adjustedYExtent;
             float objectYMax = targetBounds.center.y + adjustedYExtent;
             bool isInY = scrollerBounds.min.y < objectYMin && scrollerBounds.max.y > objectYMax;
-
+            
             return isInX && isInY;
         }
     }

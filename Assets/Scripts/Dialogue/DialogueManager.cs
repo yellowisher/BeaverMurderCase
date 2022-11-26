@@ -4,6 +4,7 @@ using BeaverMurderCase.Common;
 using Febucci.UI;
 using NaughtyAttributes;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace BeaverMurderCase.Dialogue
 {
@@ -11,6 +12,8 @@ namespace BeaverMurderCase.Dialogue
     {
         [SerializeField] private TextAnimator _textAnimator;
         [SerializeField] private TextAnimatorPlayer _textAnimatorPlayer;
+        [SerializeField] private Image _leftPortrait;
+        [SerializeField] private Image _rightPortrait;
 
         private bool _didInput;
         private bool _allTextShowed;
@@ -31,6 +34,8 @@ namespace BeaverMurderCase.Dialogue
             {
                 _speechSets.Add(speech.name, speech);
             }
+            
+            ClearSpeech();
         }
 
         private void Update()
@@ -64,7 +69,7 @@ namespace BeaverMurderCase.Dialogue
 
         public void StartSpeechSet(SpeechSet speechSet)
         {
-            StopCoroutine(nameof(StartSpeechSetCo));
+            ClearSpeech();
             StartCoroutine(nameof(StartSpeechSetCo), speechSet);
         }
 
@@ -74,6 +79,18 @@ namespace BeaverMurderCase.Dialogue
             for (int i = 0; i < speechSet.Speeches.Count; i++)
             {
                 var speech = speechSet.Speeches[i];
+
+                DisablePortrait(_leftPortrait);
+                DisablePortrait(_rightPortrait);
+                if (speech.Talker == Speech.TalkerLeft)
+                {
+                    SetPortrait(_leftPortrait, speech.Portrait);
+                }
+                else if (speech.Talker == Speech.TalkerRight)
+                {
+                    SetPortrait(_rightPortrait, speech.Portrait);
+                }
+                
                 _textAnimator.SetText(speech.Line, true);
                 _textAnimatorPlayer.StartShowingText();
                 _allTextShowed = false;
@@ -97,13 +114,28 @@ namespace BeaverMurderCase.Dialogue
             }
 
             IsSpeeching = false;
-            Debug.Log("speech done");
+            Debug.Log($"Speech {speechSet.name} done");
         }
 
         public void ClearSpeech()
         {
             StopCoroutine(nameof(StartSpeechSetCo));
             _textAnimator.SetText(string.Empty, true);
+
+            DisablePortrait(_leftPortrait);
+            DisablePortrait(_rightPortrait);
+        }
+
+        private void SetPortrait(Image image, Sprite sprite)
+        {
+            image.gameObject.SetActive(true);
+            image.sprite = sprite;
+        }
+
+        private void DisablePortrait(Image image)
+        {
+            image.sprite = null;
+            image.gameObject.SetActive(false);
         }
         
         [SerializeField] private SpeechSet _testSpeechSet;

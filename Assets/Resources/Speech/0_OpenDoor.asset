@@ -13,19 +13,18 @@ MonoBehaviour:
   m_Name: 0_OpenDoor
   m_EditorClassIdentifier: 
   Speeches:
-  - Talker: 0
+  - Talker: 1
     Portrait: {fileID: 0}
     Line: "\uBB38\uC774 \uC5F4\uB838\uC2B5\uB2C8\uB2E4"
   - Talker: 0
-    Portrait: {fileID: 0}
-    Line: 2qweqweqweqwe
+    Portrait: {fileID: 5345872608934009498, guid: ca560440f08d81b42ba48786ba6b3fcf, type: 3}
+    Line: "\uBB38\uC774 \uC5F4\uB838\uAD70!"
+  - Talker: 2
+    Portrait: {fileID: -3533667333766559418, guid: ca560440f08d81b42ba48786ba6b3fcf, type: 3}
+    Line: "\uC815\uB9D0\uB85C \uBB38\uC774 \uC5F4\uB838\uAD70!"
   - Talker: 0
-    Portrait: {fileID: 0}
-    Line: '3qwe qweqwe
-
-      qewqwe
-
-      weqwe'
-  - Talker: 0
-    Portrait: {fileID: 0}
-    Line: 4 qwe qwe
+    Portrait: {fileID: -1734770238438880703, guid: ca560440f08d81b42ba48786ba6b3fcf, type: 3}
+    Line: "\uBB38\uC774 \uC5F4\uB838\uAD70! \uBB38\uC774 \uC5F4\uB838\uAD70! \uBB38\uC774
+      \uC5F4\uB838\uAD70! \uBB38\uC774 \uC5F4\uB838\uAD70! \uBB38\uC774 \uC5F4\uB838\uAD70!
+      \uBB38\uC774 \uC5F4\uB838\uAD70! \uBB38\uC774 \uC5F4\uB838\uAD70! \uBB38\uC774
+      \uC5F4\uB838\uAD70! \uBB38\uC774 \uC5F4\uB838\uAD70! \uBB38\uC774 \uC5F4\uB838\uAD70! "

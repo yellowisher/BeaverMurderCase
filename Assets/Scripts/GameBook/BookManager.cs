@@ -20,7 +20,8 @@ namespace BeaverMurderCase.GameBook
         public List<Page> Pages { get; } = new();
         public List<PageButton> PageButtons { get; } = new();
 
-        public int CurrentPage { get; private set; } = -1;
+        public int CurrentPageNumber { get; private set; } = -1;
+        public Page CurrentPage => Pages[CurrentPageNumber];
 
 #if UNITY_EDITOR
         [Button]
@@ -42,9 +43,12 @@ namespace BeaverMurderCase.GameBook
 
             var pages = _pageHolder.GetComponentsInChildren<Page>(true);
             Pages.AddRange(pages);
-            foreach (var page in Pages)
+
+            for (int i = 0; i < Pages.Count; i++)
             {
+                var page = Pages[i];
                 page.gameObject.SetActive(false);
+                page.Initialize(i);
             }
             
             var buttons = _pageButtonHolder.GetComponentsInChildren<PageButton>(true);
@@ -62,6 +66,7 @@ namespace BeaverMurderCase.GameBook
         {
             if (Pages[page].IsUnlocked) return false;
             
+            GameManager.Instance.SetScrollerState(false);
             Pages[page].IsUnlocked = true;
             PageButtons[page].OnPageUnlocked();
 
@@ -71,28 +76,28 @@ namespace BeaverMurderCase.GameBook
         public async void OpenPage(int page)
         {
             if (_isTransitioning) return;
-            if (page == CurrentPage) return;
+            if (page == CurrentPageNumber) return;
             if (DialogueManager.Instance.IsSpeeching) return;
 
             _isTransitioning = true;
-            if (CurrentPage != -1)
+            if (CurrentPageNumber != -1)
             {
-                PageButtons[CurrentPage].SetCurrentPage(false);
+                PageButtons[CurrentPageNumber].SetCurrentPage(false);
             }
             
             PageButtons[page].SetCurrentPage(true);
             GameManager.Instance.SetScrollerState(false);
 
-            if (CurrentPage != -1)
+            if (CurrentPageNumber != -1)
             {
                 CloseCurrentPage();
                 DialogueManager.Instance.ClearSpeech();
                 await UniTaskHelper.DelaySeconds(_fadeDelay);
             }
 
-            CurrentPage = page;
+            CurrentPageNumber = page;
 
-            var pageToOpen = Pages[CurrentPage];
+            var pageToOpen = Pages[CurrentPageNumber];
             pageToOpen.Open();
             pageToOpen.CanvasGroup.alpha = 0;
             await pageToOpen.CanvasGroup.DOFade(1f, _fadeDuration).SetEase(Ease.InQuad);
@@ -102,7 +107,7 @@ namespace BeaverMurderCase.GameBook
 
             async void CloseCurrentPage()
             {
-                var pageToClose = Pages[CurrentPage];
+                var pageToClose = Pages[CurrentPageNumber];
                 await pageToClose.CanvasGroup.DOFade(0, _fadeDuration).SetEase(Ease.OutQuad);
                 pageToClose.Close();
             }

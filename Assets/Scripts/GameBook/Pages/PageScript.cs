@@ -8,7 +8,7 @@ namespace BeaverMurderCase.GameBook.Pages
         
         public void OnOpen(Page page)
         {
-            if (page == null)
+            if (_page == null)
             {
                 _page = page;
                 Initialize();

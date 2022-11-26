@@ -10,6 +10,7 @@ namespace BeaverMurderCase.GameBook.Gimmick
         public void Scroll(float amount)
         {
             OnScroll?.Invoke(amount);
+            //Debug.Log($"{gameObject.name} scroll: {amount}");
         }
     }
 }
