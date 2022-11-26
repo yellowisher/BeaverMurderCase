@@ -19,7 +19,7 @@ namespace BeaverMurderCase.Dialogue
         [SerializeField] private GameObject _goNextCursor;
 
         private bool _didInput;
-        private bool _allTextShowed;
+        public bool _allTextShowed;
         private readonly Dictionary<string, SpeechSet> _speechSets = new();
         
         public bool IsSpeeching { get; private set; }
