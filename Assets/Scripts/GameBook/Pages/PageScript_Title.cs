@@ -95,7 +95,6 @@ namespace BeaverMurderCase.GameBook.Pages
                 await UniTaskHelper.DelaySeconds(0.5f);
                 await EffectManager.Instance.ScreenFlash(new Color(0, 0, 0, 0), 1.5f);
 
-
                 Dialogue.DialogueManager.Instance.StartSpeechSet("title_opening 6");
 
                 BookManager.Instance.UnlockPage(1);
