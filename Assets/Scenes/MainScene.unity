@@ -3096,7 +3096,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &621177614
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7059,8 +7059,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameStartMessage: {fileID: 621177615}
-  _goal: 3
   _skip: 0
+  _goal: 3
 --- !u!1 &1607278515
 GameObject:
   m_ObjectHideFlags: 0
