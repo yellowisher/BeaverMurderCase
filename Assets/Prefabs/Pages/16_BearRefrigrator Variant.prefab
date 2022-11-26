@@ -85,7 +85,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1038640697392918789, guid: 07c09656c3297f949885e8da16a2a112, type: 3}
       propertyPath: m_Name
-      value: 16_BearRefrigrator
+      value: 16_BearRefrigrator Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1038640697392918789, guid: 07c09656c3297f949885e8da16a2a112, type: 3}
       propertyPath: m_IsActive
@@ -204,6 +204,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _targetSpeech: {fileID: 11400000, guid: cd250591acd927e44b6f95ce5834c911, type: 2}
+  _afterSpeech:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &289214755
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,19 +5,27 @@ namespace BeaverMurderCase.GameBook
 {
     public class PageCheat : MonoBehaviour
     {
-        public int GotoPage;
-        public int UnlockPage;
+        public int TargetPage;
 
         [Button]
         public void Go()
         {
-            BookManager.Instance.OpenPage(GotoPage);
+            BookManager.Instance.OpenPage(TargetPage);
         }
 
         [Button]
         public void Unlock()
         {
-            BookManager.Instance.UnlockPage(UnlockPage);
+            BookManager.Instance.UnlockPage(TargetPage);
+        }
+
+        [Button]
+        public void UnlockAll()
+        {
+            foreach (var pageNumber in BookManager.Instance.Pages.Keys)
+            {
+                BookManager.Instance.UnlockPage(pageNumber);
+            }
         }
     }
 }
