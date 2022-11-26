@@ -7480,7 +7480,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2677032350404746233, guid: 837d83e4baa6dd24ba2755e33c6f9986, type: 3}
       propertyPath: m_Name
-      value: 20_
+      value: 20_EndingHaedal
       objectReference: {fileID: 0}
     - target: {fileID: 2677032350404746233, guid: 837d83e4baa6dd24ba2755e33c6f9986, type: 3}
       propertyPath: m_IsActive
@@ -7804,7 +7804,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1602706568, guid: 0d3837d1b9c0b6f438be89fd35a562a6, type: 3}
       propertyPath: _skip
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1924314265003900981, guid: 0d3837d1b9c0b6f438be89fd35a562a6, type: 3}
       propertyPath: m_Pivot.x
@@ -8595,7 +8595,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8652615675067432635, guid: 33a6217bff21a604b98f60dd028b35cd, type: 3}
       propertyPath: m_Name
-      value: 21_
+      value: 21_EndingBear
       objectReference: {fileID: 0}
     - target: {fileID: 8652615675067432635, guid: 33a6217bff21a604b98f60dd028b35cd, type: 3}
       propertyPath: m_IsActive
@@ -8730,7 +8730,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1444157754981723067, guid: 47a0cfb61011e5f41aaf16cbb1aa78e0, type: 3}
       propertyPath: m_Name
-      value: 19_
+      value: 19_EndingHama
       objectReference: {fileID: 0}
     - target: {fileID: 1444157754981723067, guid: 47a0cfb61011e5f41aaf16cbb1aa78e0, type: 3}
       propertyPath: m_IsActive
