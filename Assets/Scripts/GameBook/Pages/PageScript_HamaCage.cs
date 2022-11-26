@@ -3,6 +3,7 @@ using BeaverMurderCase.Dialogue;
 using BeaverMurderCase.GameBook.Gimmick;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace BeaverMurderCase.GameBook.Pages
 {
@@ -13,6 +14,7 @@ namespace BeaverMurderCase.GameBook.Pages
         [SerializeField] private float _maxRotate;
         [SerializeField] private Transform _door;
         [SerializeField] private DOTweenAnimation _mococoAnimation;
+        [SerializeField] private Image _mococoImage;
 
         private float _value;
         private bool _isOpen;
@@ -28,12 +30,15 @@ namespace BeaverMurderCase.GameBook.Pages
             _door.localRotation = Quaternion.identity;
             _isOpen = false;
             _mococoAnimation.DORewind();
+            _mococoAnimation.gameObject.SetActive(false);
+            _mococoImage.raycastTarget = true;
             
             DialogueManager.Instance.StartSpeechSet("Hama_Cage");
         }
         
         public async void OnScroll(Vector2 delta)
         {
+            _mococoAnimation.gameObject.SetActive(true);
             _value += delta.x;
             _value = Mathf.Clamp(_value, 0, _goal);
 
@@ -51,7 +56,13 @@ namespace BeaverMurderCase.GameBook.Pages
 
         public async void OnClick_Mococo()
         {
-            _mococoAnimation.DOPlay();
+            if (!_isOpen)
+            {
+                return;
+            }
+            
+            _mococoImage.raycastTarget = false;
+            _mococoAnimation.DORestart();
             await UniTaskHelper.DelaySeconds(_mococoAnimation.duration);
             DialogueManager.Instance.StartSpeechSet("Hama_MococoClick");
         }
