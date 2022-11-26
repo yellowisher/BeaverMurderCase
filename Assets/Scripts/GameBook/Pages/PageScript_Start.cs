@@ -33,7 +33,7 @@ namespace BeaverMurderCase.GameBook.Pages
 
         private async void OnScroll(Vector2 amount)
         {
-            _accumulated += Mathf.Abs(0.02f);
+            _accumulated += Mathf.Abs(amount.x);
 
             if (_accumulated > _goal && !_event_finish) {
                 _event_finish = true;

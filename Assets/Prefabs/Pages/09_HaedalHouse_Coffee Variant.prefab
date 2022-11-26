@@ -114,8 +114,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _duration: 0.1
-  _scaleAdditionOnOver: 0.05
-  _scaleAdditionOnPress: -0.05
+  _scaleAdditionOnOver: 0.01
+  _scaleAdditionOnPress: -0.01
   _playSound: 0
 --- !u!1 &4968395470555997643
 GameObject:

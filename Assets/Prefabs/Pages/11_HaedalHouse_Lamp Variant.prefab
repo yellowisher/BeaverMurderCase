@@ -177,7 +177,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1038640697392918789, guid: 07c09656c3297f949885e8da16a2a112, type: 3}
       propertyPath: m_Name
-      value: 11_HaedalHouse_Lamp
+      value: 11_HaedalHouse_Lamp Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1038640697392918789, guid: 07c09656c3297f949885e8da16a2a112, type: 3}
       propertyPath: m_IsActive
@@ -290,7 +290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfe0c5eff49248edad9a1a6a3de08dce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _goal: 2
+  _goal: 1.5
   _fire: {fileID: 1607278519}
 --- !u!224 &8669605931458192575 stripped
 RectTransform:

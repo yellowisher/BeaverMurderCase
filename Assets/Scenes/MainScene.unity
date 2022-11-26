@@ -3375,7 +3375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameStartMessage: {fileID: 1470486833}
-  _goal: 4.5
+  _goal: 1.5
   _event_finish: 0
 --- !u!224 &1269787645 stripped
 RectTransform:
