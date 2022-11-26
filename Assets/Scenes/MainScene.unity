@@ -4423,7 +4423,7 @@ PrefabInstance:
       objectReference: {fileID: 1037976557}
     - target: {fileID: 4750726177244675880, guid: 07c09656c3297f949885e8da16a2a112, type: 3}
       propertyPath: PageNumber
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4750726177244675880, guid: 07c09656c3297f949885e8da16a2a112, type: 3}
       propertyPath: ScrollerType
