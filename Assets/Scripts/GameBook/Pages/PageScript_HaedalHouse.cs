@@ -13,7 +13,9 @@ namespace BeaverMurderCase.GameBook.Pages
             DialogueManager.Instance.StartSpeechSet("HaedalHouse_Intro");
             await DialogueManager.Instance.WaitForSpeechEndAsync();
             BookManager.Instance.UnlockPage(9);
+            await UniTaskHelper.DelaySeconds(0.1f);
             BookManager.Instance.UnlockPage(10);
+            await UniTaskHelper.DelaySeconds(0.1f);
             BookManager.Instance.UnlockPage(11);
         }
 

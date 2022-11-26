@@ -47,14 +47,25 @@ namespace BeaverMurderCase.GameBook.Pages
                 .Subscribe(async _ =>
                 {
                     DialogueManager.Instance
-                        .StartSpeechSet("BearHouse");
+                        .StartSpeechSet("House_BearHouse");
                     BookManager.Instance.UnlockPage(7);
                 });
         }
 
-        protected override void OnOpened()
+        protected override async void OnOpened()
         {
-
+            if (BookManager.Instance.IsUnlocked(5) &&
+                BookManager.Instance.IsUnlocked(6) &&
+                BookManager.Instance.IsUnlocked(7))
+            {
+                DialogueManager.Instance.StartSpeechSet("HouseOption_Ending");
+                await DialogueManager.Instance.WaitForSpeechEndAsync();
+                BookManager.Instance.UnlockPage(18);
+            }
+            else
+            {
+                DialogueManager.Instance.StartSpeechSet("HouseOption_Normal");
+            }
         }
     }
 }

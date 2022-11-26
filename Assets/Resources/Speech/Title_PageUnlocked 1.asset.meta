@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Sprites/sprite.meta
+guid: a61e70c5cc12ef343a5d122d5abff1fa
+folderAsset: yes
+DefaultImporter:
+========
 guid: cd3abf2dc8711ba49b10f715ac809655
 NativeFormatImporter:
+>>>>>>>> 11775049f1bb09521f309c3b195e81cb4c6cb9b4:Assets/Resources/Speech/Title_PageUnlocked 1.asset.meta
   externalObjects: {}
   mainObjectFileID: 11400000
   userData: 
