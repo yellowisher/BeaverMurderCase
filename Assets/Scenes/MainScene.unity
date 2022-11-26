@@ -5549,7 +5549,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 410624609951741050, guid: d432dbc9b7a89b748b6c34b7155610b2, type: 3}
       propertyPath: m_Name
-      value: 06_
+      value: 06_HamaHouse
       objectReference: {fileID: 0}
     - target: {fileID: 410624609951741050, guid: d432dbc9b7a89b748b6c34b7155610b2, type: 3}
       propertyPath: m_IsActive
@@ -5751,7 +5751,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 99596291619047980, guid: 5e4b0b296594a8648a39975db8477abe, type: 3}
       propertyPath: m_Name
-      value: 13_
+      value: 13_HamaPlanCard
       objectReference: {fileID: 0}
     - target: {fileID: 99596291619047980, guid: 5e4b0b296594a8648a39975db8477abe, type: 3}
       propertyPath: m_IsActive
@@ -6462,7 +6462,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3714338309094533628, guid: bea06c5861a1efb438b7cd8ed0a9ee9e, type: 3}
       propertyPath: m_Name
-      value: 12_
+      value: 12_HamaDummbel
       objectReference: {fileID: 0}
     - target: {fileID: 3714338309094533628, guid: bea06c5861a1efb438b7cd8ed0a9ee9e, type: 3}
       propertyPath: m_IsActive
@@ -7318,7 +7318,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6064866075047254353, guid: 1b01d95120ffd424ca28f46373bd5225, type: 3}
       propertyPath: m_Name
-      value: 14_
+      value: 14_HamaCage
       objectReference: {fileID: 0}
     - target: {fileID: 6064866075047254353, guid: 1b01d95120ffd424ca28f46373bd5225, type: 3}
       propertyPath: m_IsActive
